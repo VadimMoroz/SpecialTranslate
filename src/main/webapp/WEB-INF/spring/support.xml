@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+	
+	<bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer"
+		p:location="classpath:email.properties" 
+		p:placeholderPrefix="${support:"
+		p:placeholderSuffix="}"/>		
+	 
+	<bean id="mailSender" class="org.springframework.mail.javamail.JavaMailSenderImpl"
+		p:host="${support:email.host}"
+		p:port="${support:email.port}"
+		p:username="${support:email.username}"
+		p:password="${support:email.password}"
+		p:defaultEncoding="UTF-8">			
+		<property name="javaMailProperties">
+		   <props>		   	
+       	      <prop key="mail.smtp.auth">true</prop>
+       	      <prop key="mail.smtp.starttls.enable">true</prop>      	      
+       	   </props>
+		</property>
+	</bean>
+	 
+	<bean id="EMail" class="net.x3pro.siteengine.support.EMail">
+		<property name="mailSender" ref="mailSender" />
+	</bean>
+	 
+</beans>

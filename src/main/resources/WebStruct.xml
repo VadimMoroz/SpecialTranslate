@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='utf-8'?>
+<structure>
+	<parameters>
+		<service>
+			<name_>specialtranslate.com:8080/</name_>
+			<host_>http://specialtranslate.com:8080/</host_>
+		</service>
+		<site>
+			<title>Перевод только нужных слов</title>
+			<name>specialtranslate</name>
+			<host_>http://specialtranslate.com:8080/</host_>
+		</site>
+	</parameters>
+	<menus>
+		<header>
+			<item url="/" title="Главная" active="1"/>
+			<item url="/baseedit" title="Базы слов" active="1" authorize="1"/>
+			<item url="/teach" title="Изучение" active="1" authorize="1"/>			
+		</header>
+	</menus>
+	<pages>
+		<item url="" title="Главная" name="main" active="1" template="main"/>
+		<item url="baseedit" title="Базы слов" name="baseedit" active="1" template="main">
+			<header type="js" value="jquery-1.9.0.js"/>
+			<header type="js" value="teach.js"/>
+		</item>
+		<item url="teach" title="Изучение" name="teach" active="1" template="main">
+			<header type="js" value="jquery-1.9.0.js"/>
+			<header type="js" value="teach.js"/>
+			<header type="css" value="teach.css"/>
+		</item>
+		<item url="teachmobile" title="Изучение (мобильная версия)" name="teachmobile" active="1" template="simple">
+			<header type="js" value="jquery-1.9.0.js"/>
+			<header type="js" value="teach.js"/>
+			<header type="css" value="teach.css"/>
+		</item>
+		
+		<item url="autotranslate" title="Автоматические перевод слов через google.translate" name="autotranslate" active="1" template="simple"/>
+	</pages>
+	
+
+</structure>

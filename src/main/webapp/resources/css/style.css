@@ -1,0 +1,20 @@
+body {background: url("/resources/img/bg.jpg");}
+h3{margin:0px;}
+a {text-decoration: none;}
+form{margin: 0px;}
+#header_title h1{margin: 0px;font-size: 1.2em;}
+#menu-main{border: 1px solid #FFAA33;border-radius: 5px;background: #1E1A14; padding: 3px; margin:0px;}
+#menu-main .main-menu-item{display: inline; background: #555;border-radius: 3px;padding: 0px 5px;}
+#menu-main .main-menu-item a{color: #fff;}
+#menu-main .current-menu-item {border: 1px #fff solid;background: #FCBE53;}
+#menu-main .current-menu-item a{color:#222}
+#user_page_login_small{border: 1px solid #F6AA33;border-radius: 3px;background:#FCE4BF;width: 230px;padding: 4px;box-shadow: 2px 2px 1px rgba(0,0,0,0.6);right: 10px;top: 10px;position: absolute;}
+#user_page_login{border: 1px dashed;width: 400px;padding: 5px;border-radius: 5px;}
+#user_page_login h2{padding-left: 110px;margin: 0px;}
+#content{padding-left:5%}
+input[type=text],input[type=password],textarea {border:1px solid #555;border-radius:3px; padding: 2px;}
+.error_field{color:red;}
+#button_help{border: 1px solid #FFBB00;border-radius: 3px;padding: 2px;font-size: 0.85em;text-align: center;display: block;background-color: #FFEEBB;color: #000;}
+li.basetext_item{border: 1px solid #fa5;border-radius: 4px;margin-top: 3px;padding: 0px 3px;max-width: 400px;background-color: #Fda;}
+a.button_del{float: right}
+a.button_del img{width: 14px;margin-top: 3px;}
